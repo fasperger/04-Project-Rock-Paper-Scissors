@@ -1,3 +1,4 @@
+// Get random choice from computer player
 const getComputerChoice = () => {
   let choice = Math.floor(Math.random() * 3 + 1);
   if (choice == 1) {
@@ -10,6 +11,7 @@ const getComputerChoice = () => {
   return choice;
 };
 
+// Play one round of Rock, Paper Scissors
 let playRound = (playerSelection, computerSelection) => {
   playerSelection = playerSelection.toLowerCase();
 
@@ -32,14 +34,18 @@ let playRound = (playerSelection, computerSelection) => {
   }
 };
 
+// Initialize game and ask user for input
 let game = () => {
   const computerSelection = getComputerChoice();
   const playerSelection = prompt("Please choose rock, paper or scissors");
   return playRound(playerSelection, computerSelection);
 };
 
+// Keep track of scores
 let myScore = 0;
 let computerScore = 0;
+
+// Define number of game to play
 for (i = 0; i < 5; i++) {
   let playedGame = game();
   if (playedGame == "Computer Wins!") {
@@ -53,12 +59,14 @@ for (i = 0; i < 5; i++) {
   console.log(`Computer's score is: ${computerScore}`);
 }
 
+// Print final score after game rounds
 console.log(`
   Final score:
   Player: ${myScore}.
   Computer: ${computerScore}.
   `);
 
+// Determine Winner and log it
 if (computerScore > myScore) {
   console.log("Computer Wins!");
 } else if (computerScore < myScore) {
