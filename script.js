@@ -37,20 +37,17 @@ function game() {
   let myScore = 0;
   let computerScore = 0;
 
-  // Play 5 rounds of the game!
-  for (let i = 0; i < 5; i++) {
-    const playerSelection = prompt("Please choose rock, paper or scissors");
-    const computerSelection = getComputerChoice();
-    let gameResult = playRound(playerSelection, computerSelection);
-    if (gameResult == 1) {
-      console.log("Computer Wins this round!");
-      computerScore++;
-    } else if (gameResult == 2) {
-      console.log("You Win this round!");
-      myScore++;
-    } else {
-      console.log("It's a Draw!");
-    }
+  const playerSelection = prompt("Please choose rock, paper or scissors");
+  const computerSelection = getComputerChoice();
+  let gameResult = playRound(playerSelection, computerSelection);
+  if (gameResult == 1) {
+    console.log("Computer Wins this round!");
+    computerScore++;
+  } else if (gameResult == 2) {
+    console.log("You Win this round!");
+    myScore++;
+  } else {
+    console.log("It's a Draw!");
   }
 
   console.log(`Your final score is: ${myScore}`);
