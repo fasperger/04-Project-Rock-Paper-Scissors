@@ -33,11 +33,11 @@ function playRound(playerSelection, computerSelection) {
 }
 
 // Play the game!
-function game() {
+function game(id) {
   let myScore = 0;
   let computerScore = 0;
 
-  const playerSelection = prompt("Please choose rock, paper or scissors");
+  const playerSelection = id;
   const computerSelection = getComputerChoice();
   let gameResult = playRound(playerSelection, computerSelection);
   if (gameResult == 1) {
@@ -61,5 +61,3 @@ function game() {
     console.log("Computer wins the game!");
   }
 }
-
-game();
