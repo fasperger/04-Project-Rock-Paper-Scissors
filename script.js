@@ -32,32 +32,37 @@ function playRound(playerSelection, computerSelection) {
   }
 }
 
+let myScore = 0;
+let computerScore = 0;
 // Play the game!
+
 function game(id) {
-  let myScore = 0;
-  let computerScore = 0;
+  let final = document.querySelector("#final");
+  if (myScore < 5 && computerScore < 5) {
+    const playerSelection = id;
+    const computerSelection = getComputerChoice();
 
-  const playerSelection = id;
-  const computerSelection = getComputerChoice();
-  let gameResult = playRound(playerSelection, computerSelection);
-  if (gameResult == 1) {
-    console.log("Computer Wins this round!");
-    computerScore++;
-  } else if (gameResult == 2) {
-    console.log("You Win this round!");
-    myScore++;
+    let gameResult = playRound(playerSelection, computerSelection);
+
+    if (gameResult == 1) {
+      document.querySelector("#results").textContent =
+        "Computer Wins This round!";
+      computerScore++;
+      document.querySelector(".compScore").textContent = computerScore;
+    } else if (gameResult == 2) {
+      document.querySelector("#results").textContent = "You Win This round!";
+      myScore++;
+      document.querySelector(".myScore").textContent = myScore;
+    } else {
+      document.querySelector("#results").textContent = "It's a Draw!";
+    }
   } else {
-    console.log("It's a Draw!");
-  }
-
-  console.log(`Your final score is: ${myScore}`);
-  console.log(`Computer's final score is: ${computerScore}`);
-
-  if (myScore == computerScore) {
-    console.log("It's a Draw!");
-  } else if (myScore > computerScore) {
-    console.log("You win the game!");
-  } else {
-    console.log("Computer wins the game!");
+    if (myScore == computerScore) {
+      console.log("It's a Draw!");
+    } else if (myScore > computerScore) {
+      console.log("You win the game!");
+    } else {
+      console.log("Computer wins the game!");
+    }
   }
 }
