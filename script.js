@@ -11,7 +11,7 @@ function getComputerChoice() {
   return choice;
 }
 
-// Play one round of Rock, Paper Scissors
+// Logic for the game to work
 function playRound(playerSelection, computerSelection) {
   if (playerSelection === computerSelection) {
     return 0;
@@ -32,9 +32,12 @@ function playRound(playerSelection, computerSelection) {
   }
 }
 
+// Play the game!
 function game() {
   let myScore = 0;
   let computerScore = 0;
+
+  // Play 5 rounds of the game!
   for (let i = 0; i < 5; i++) {
     const playerSelection = prompt("Please choose rock, paper or scissors");
     const computerSelection = getComputerChoice();
