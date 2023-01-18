@@ -37,7 +37,6 @@ let computerScore = 0;
 // Play the game!
 
 function game(id) {
-  let final = document.querySelector("#final");
   if (myScore < 5 && computerScore < 5) {
     const playerSelection = id;
     const computerSelection = getComputerChoice();
@@ -56,13 +55,14 @@ function game(id) {
     } else {
       document.querySelector("#results").textContent = "It's a Draw!";
     }
-  } else {
-    if (myScore == computerScore) {
-      console.log("It's a Draw!");
-    } else if (myScore > computerScore) {
-      console.log("You win the game!");
-    } else {
-      console.log("Computer wins the game!");
+
+    if (myScore == 5 || computerScore == 5) {
+      if (myScore > computerScore) {
+        document.querySelector("#final").textContent = "You win the game!";
+      } else {
+        document.querySelector("#final").textContent =
+          "Computer wins the game!";
+      }
     }
   }
 }
