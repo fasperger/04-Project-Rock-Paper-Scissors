@@ -5,18 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/7ae5ef97e7.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <button id="rock" onclick="game(this.id)">rock</button>
-    <button id="paper" onclick="game(this.id)">paper</button>
-    <button id="scissors" onclick="game(this.id)">scissors</button>
     <div>
-      <h3 id="results"></h3>
+      <h1>Let's Play a game of Rock, Paper, Scissors!</h1>
+    </div>
+    <div class="buttons">
+      <button id="rock" onclick="game(this.id)">
+        <i class="fa-regular fa-hand-back-fist fa-8x"></i>
+      </button>
+      <button id="paper" onclick="game(this.id)">
+        <i class="fa-regular fa-hand fa-8x"></i>
+      </button>
+      <button id="scissors" onclick="game(this.id)">
+        <i class="fa-regular fa-hand-scissors fa-8x"></i>
+      </button>
+    </div>
+
+    <div class="score">
+      <h2 id="results">Scoreboard</h2>
       <p>Your score: <span class="myScore">0</span></p>
       <p>Computer's score: <span class="compScore">0</span></p>
     </div>
-    <div id="final"></div>
     <script src="script.js"></script>
   </body>
 </html>

@@ -1,0 +1,69 @@
+body {
+  height: 100%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+}
+h1 {
+  text-align: center;
+  margin: 50px;
+}
+
+h2 {
+  font-size: 30px;
+  color: white;
+  background-color: seagreen;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.buttons {
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+}
+
+button {
+  width: 150px;
+  height: 150px;
+  padding: 10px;
+  border-radius: 15px;
+  border: none;
+  background-color: cornflowerblue;
+}
+
+#rock i {
+  color: burlywood;
+  transform: rotate(45deg);
+}
+
+#paper i {
+  color: lightgray;
+  transform: rotate(45deg);
+}
+
+#scissors i {
+  color: darkorange;
+  transform: rotate(135deg);
+}
+
+.score {
+  text-align: center;
+  border: 3px solid lightseagreen;
+  padding: 20px;
+  border-radius: 20px;
+  width: 450px;
+}
+
+.score p {
+  margin: 30px;
+  font-size: 20px;
+}
+
+.score span {
+  font-size: 25px;
+  font-weight: bold;
+}

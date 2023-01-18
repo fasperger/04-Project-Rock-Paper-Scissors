@@ -58,9 +58,9 @@ function game(id) {
 
     if (myScore == 5 || computerScore == 5) {
       if (myScore > computerScore) {
-        document.querySelector("#final").textContent = "You win the game!";
+        document.querySelector("#results").textContent = "You win the game!";
       } else {
-        document.querySelector("#final").textContent =
+        document.querySelector("#results").textContent =
           "Computer wins the game!";
       }
     }
